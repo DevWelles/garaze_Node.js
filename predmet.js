@@ -3,6 +3,6 @@ module.exports = class Predmet {
     this.ime = ime + '.';
     this.naziv = naziv;
     this.vrijednost = vrijednost;
-    this.uGarazi = uGarazi
+    this.uGarazi = uGarazi;
   }
 }
