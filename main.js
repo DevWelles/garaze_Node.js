@@ -37,8 +37,10 @@ ourStore.predmeti.map(predmet => {
   predmet.vrijednost = prompt ('Unesite vrijednost predmeta? ')
 });
 
-console.log(ourStore.predmeti)
-// ispis.ispisivanje()
+ourStore.addPredmetToGaraza() //sa ovim dodajem predmete u pripadajuće garaže
+
+
+ ispis.ispisivanje(ourStore)
 
 
 
