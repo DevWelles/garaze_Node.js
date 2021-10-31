@@ -17,8 +17,8 @@ for (let i = 1; i<ourStore.brojGaraza+1; i++ ) {
 }
 
 ourStore.garaze.map(garaza => {
-  garaza.velicina = prompt(`Unesite veličinu garaže ${garaza.ime}. `);
-  garaza.lokacija = prompt(`Unesite lokaciju garaze ${garaza.ime}. `);
+  garaza.velicina = prompt(`Unesite veličinu garaže ${garaza.ime} `);
+  garaza.lokacija = prompt(`Unesite lokaciju garaze ${garaza.ime} `);
   garaza.automatic = prompt(`Jesu li vrata automatska? DA/NE `); //Popunjavam ove parametre za svaki objekt Garaže u listi garaze od storea
 }); //Pitanje za Prtu, kako napraviti da napravim sve da bude u jednom promptu a ne ovako svaka varijabla jedan prompt?
 

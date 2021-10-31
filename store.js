@@ -8,32 +8,36 @@ module.exports = class Store {
     this._brojPredmeta = 0;
     this._predmeti = [];
   }
+  //getters:
   get brojGaraza() {
     return this._brojGaraza
-  }
-  set brojGaraza(userInputBroj) {
-    this._brojGaraza = userInputBroj; //ovo se pozove kad user na promptu u main fileu upiše broj garaža(M)
   }
   get garaze() {
     return this._garaze;
   }
- 
   get brojPredmeta() {
     return this._brojPredmeta
-  }
-  set brojPredmeta(newNum) {
-    this._brojPredmeta = newNum //ovo se pozove kad user na promptu u main fileu upiše broj predmeta(M)
   }
   get predmeti () {
     return this._predmeti
   }
+  //setters:
+  //setersi za _garaze i _predmeti nam ne tribeaju jer ih punimo metodom push
+  //pa ih zapravo pozovemo sa get i onda napunimo sa push
+  set brojGaraza(userInputBroj) {
+    this._brojGaraza = userInputBroj; //ovo se pozove kad user na promptu u main fileu upiše broj garaža(M)
+  }
+  set brojPredmeta(newNum) {
+    this._brojPredmeta = newNum //ovo se pozove kad user na promptu u main fileu upiše broj predmeta(M)
+  }
+  
 
-  addPredmetToGaraza () {
+  addPredmetToGaraza () { //dodaje predmet u pripadajuću garažu
     for (let i = 0; i < this.predmeti.length; i++) {
       for (let j = 0; j < this.garaze.length; j++){
         if (this.predmeti[i].uGarazi == this.garaze[j].ime){
           this.garaze[j].predmetiUGarazi.push(this.predmeti[i])
-        } //dodaje predmet u pripadajuću garažu
+        } 
       }
     }
   }

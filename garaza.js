@@ -1,11 +1,42 @@
 module.exports = class Garaza {
-  constructor (ime, velicina, lokacija, automatic) {
-    this.ime = ime 
-    this.velicina = velicina;
-    this.lokacija = lokacija;
-    this.automatic = automatic;
-    this.predmetiUGarazi = [];
+  constructor (ime) {
+    this._ime = ime + '.'
+    this._velicina = '';
+    this._lokacija = '';
+    this._automatic = '';
+    this._predmetiUGarazi = [];
   }
+  //getters:
+  get ime() {
+    return this._ime;
+  }
+  get velicina() {
+    return this._velicina;
+  }
+  get lokacija() {
+    return this._lokacija;
+  }
+  get automatic() {
+    return this._automatic
+  }
+  get predmetiUGarazi() {
+    return this._predmetiUGarazi;
+  }
+
+  //setters:
+  set ime(newIme) {
+    this._ime = newIme;
+  }
+  set veličina(newSize) {
+    this._velicina = newSize;
+  }
+  set lokacija(newLokacija) {
+    this._lokacija = newLokacija;
+  }
+  set automatic(newAutomatic) {
+    this._automatic = newAutomatic;
+  }
+
 
   ispisPredmeta () {
     let naziviIVrijednosti = [];
