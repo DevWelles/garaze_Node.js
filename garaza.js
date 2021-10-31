@@ -24,10 +24,12 @@ module.exports = class Garaza {
   }
 
   //setters:
+  //setter za _predmetiUGarazi nije potreban jer kasnije array punimo methodom push a ne sa pozivom
+  //sa novim parametrima, tako da je zapravo pozovemo sa get metodom i onda pushamo iteme u array
   set ime(newIme) {
     this._ime = newIme;
   }
-  set veličina(newSize) {
+  set velicina(newSize) {
     this._velicina = newSize;
   }
   set lokacija(newLokacija) {
@@ -36,7 +38,7 @@ module.exports = class Garaza {
   set automatic(newAutomatic) {
     this._automatic = newAutomatic;
   }
-
+  
 
   ispisPredmeta () {
     let naziviIVrijednosti = [];

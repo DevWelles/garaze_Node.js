@@ -21,7 +21,7 @@ module.exports = class Ispis{
 
   ispisivanje() {
     this.store.garaze.forEach(garaza => {
-      console.log(`${garaza.ime}. garaža se nalazi na lokaciji "${garaza.lokacija}" njezina veličina
+      console.log(`${garaza.ime} garaža se nalazi na lokaciji "${garaza.lokacija}" njezina veličina
        je "${garaza.velicina}" i ${garaza.automatic} posjeduje automatska vrata. Garaža sadrži
         ${garaza.predmetiUGarazi.length} predmet(a). Predmeti su${garaza.ispisPredmeta()}`)
     })
